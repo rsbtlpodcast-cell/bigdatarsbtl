@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dokumen RSBTL</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+<style>
+*{margin:0;padding:0;box-sizing:border-box;font-family:'Poppins',sans-serif}
+
+body{
+  background:#f4f6f9;
+}
+
+/* NAVBAR */
+.navbar{
+  background:white;
+  padding:15px 30px;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  box-shadow:0 5px 15px rgba(0,0,0,0.1);
+}
+
+.navbar h2{
+  color:#2c3e50;
+}
+
+.navbar a{
+  text-decoration:none;
+  color:#3498db;
+  font-weight:600;
+}
+
+/* CONTAINER */
+.container{
+  padding:30px;
+}
+
+/* HEADER */
+.header{
+  margin-bottom:25px;
+}
+
+.header h1{
+  color:#2c3e50;
+}
+
+.header p{
+  color:gray;
+}
+
+/* GRID */
+.grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(230px,1fr));
+  gap:20px;
+}
+
+/* CARD */
+.card{
+  background:white;
+  padding:20px;
+  border-radius:15px;
+  box-shadow:0 5px 15px rgba(0,0,0,0.1);
+  cursor:pointer;
+  transition:0.3s;
+}
+
+.card:hover{
+  transform:translateY(-6px);
+}
+
+/* ICON */
+.icon{
+  font-size:35px;
+  margin-bottom:10px;
+}
+
+/* TITLE */
+.card h3{
+  margin-bottom:5px;
+}
+
+.card p{
+  font-size:13px;
+  color:gray;
+}
+
+/* MOBILE */
+@media(max-width:768px){
+  .container{padding:20px}
+}
+</style>
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+<div class="navbar">
+  <h2>📁 Dokumen RSBTL</h2>
+  <a href="index.html">⬅ Kembali</a>
+</div>
+
+<div class="container">
+
+  <div class="header">
+    <h1>Kategori Dokumen</h1>
+    <p>Pilih kategori untuk membuka dokumen di Google Drive</p>
+  </div>
+
+  <div class="grid">
+
+    <div class="card" onclick="openDrive('https://drive.google.com/drive/folders/12BxUjSrZyEHKpzsaD26GakkhYk1a73oI?usp=drive_link')">
+      <div class="icon">🏥</div>
+      <h3>Pelayanan</h3>
+      <p>Dokumen pelayanan medis & non medis</p>
+    </div>
+
+    <div class="card" onclick="openDrive('https://drive.google.com/drive/folders/1THJvjOrhLczOYWeJ1SULMHg4vHnogkC7?usp=drive_link')">
+      <div class="icon">📊</div>
+      <h3>Management</h3>
+      <p>Dokumen manajemen RS</p>
+    </div>
+
+    <div class="card" onclick="openDrive('https://drive.google.com/drive/folders/1VEvBK0g6zD75IRcHB_D_oMC4NYCH4_iP?usp=drive_link')">
+      <div class="icon">💰</div>
+      <h3>Administrasi Keuangan</h3>
+      <p>Laporan & administrasi keuangan</p>
+    </div>
+
+    <div class="card" onclick="openDrive('https://drive.google.com/drive/folders/15Tc-QpACX4Kxs__5hJF6ZanhsinIqxjv?usp=drive_link')">
+      <div class="icon">👥</div>
+      <h3>SDM & Kepegawaian</h3>
+      <p>Data pegawai & SDM</p>
+    </div>
+
+    <div class="card" onclick="openDrive('https://drive.google.com/drive/folders/16_WBERgeBzoqKfEuDB6XRZaRMfB-DHVH?usp=drive_link')">
+      <div class="icon">🏢</div>
+      <h3>Aset</h3>
+      <p>Data aset & inventaris RS</p>
+    </div>
+
+    <div class="card" onclick="openDrive('https://drive.google.com/drive/folders/11RmFpNRgQoWpstHfoWjsjoLpzawo6SML?usp=drive_link')">
+      <div class="icon">🛠️</div>
+      <h3>IPSRS</h3>
+      <p>Instalasi pemeliharaan sarana RS</p>
+    </div>
+
+    <div class="card" onclick="openDrive('https://drive.google.com/drive/folders/1nnDNezCvLOhn9YbaAkeS-nFAnDwYyJBv?usp=drive_link')">
+      <div class="icon">🗂️</div>
+      <h3>Arsip Statis</h3>
+      <p>Dokumen arsip lama & penting</p>
+    </div>
+
+  </div>
+
+</div>
+
+<script>
+function openDrive(link){
+  window.open(link, '_blank');
+}
+</script>
+
+</body>
+</html>

@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>BIG DATA RSUD Bedas Tegalluar</title>
+<link rel="icon" href="logo1.png" type="image/png">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+<style>
+*{margin:0;padding:0;box-sizing:border-box;font-family:'Poppins',sans-serif}
+
+body{
+  background:#eef2f7;
+  transition:all 0.4s ease;
+}
+
+/* NAVBAR */
+.navbar{
+  background:white;
+  padding:10px 25px;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  box-shadow:0 4px 12px rgba(0,0,0,0.08);
+  position:sticky;
+  top:0;
+  z-index:100;
+}
+
+.logo{
+  display:flex;
+  align-items:center;
+  gap:8px;
+}
+
+.logo img{
+  width:300px;
+  height:70px;
+}
+
+.logo span{
+  font-weight:600;
+  font-size:14px;
+}
+
+/* MENU */
+.nav-menu{
+  display:flex;
+  gap:20px;
+}
+
+.nav-menu a{
+  text-decoration:none;
+  color:#555;
+  font-weight:500;
+  transition:0.3s;
+}
+
+.nav-menu a:hover{
+  color:#3498db;
+}
+
+/* HERO */
+.hero{
+  height:300px;
+  background:linear-gradient(135deg,#2980b9,#6dd5fa);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  flex-direction:column;
+  color:white;
+  text-align:center;
+  padding:20px;
+}
+
+.hero h1{
+  font-size:32px;
+}
+
+.hero p{
+  margin-top:10px;
+}
+
+/* BUTTON MOBILE */
+.btn-mobile{
+  margin-top:15px;
+  padding:10px 15px;
+  border-radius:20px;
+  border:none;
+  background:rgba(255,255,255,0.2);
+  backdrop-filter:blur(10px);
+  color:white;
+  font-weight:600;
+  cursor:pointer;
+}
+
+/* MENU */
+.menu{
+  padding:40px;
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+  gap:20px;
+}
+
+.card{
+  background:white;
+  padding:25px;
+  border-radius:18px;
+  text-align:center;
+  box-shadow:0 8px 20px rgba(0,0,0,0.06);
+  cursor:pointer;
+  transition:0.3s;
+}
+
+.card:hover{
+  transform:translateY(-8px);
+}
+
+.card:active{
+  transform:scale(0.97);
+}
+
+.icon{
+  font-size:40px;
+  margin-bottom:10px;
+}
+
+.card h3{
+  font-size:16px;
+}
+
+.card p{
+  font-size:13px;
+  color:#888;
+}
+
+/* FOOTER */
+.footer{
+  background:#2c3e50;
+  color:white;
+  text-align:center;
+  padding:15px;
+}
+
+/* ================= MOBILE MODE ================= */
+.mobile-mode{
+  transform:scale(0.95);
+}
+
+/* ================= MOBILE PREMIUM ================= */
+@media(max-width:768px){
+  .navbar{
+    padding:10px 15px;
+    justify-content: center; /* logo di tengah */
+  }
+
+  .logo{
+    gap:5px;
+  }
+
+  .logo img{
+    width:200px;  /* ukuran logo mobile */
+    height:50px;
+  }
+
+  .nav-menu{
+    display:none;
+  }
+
+  .hero{
+    height:200px;
+  }
+
+  .hero h1{
+    font-size:20px;
+  }
+
+  .hero p{
+    font-size:12px;
+  }
+
+  .btn-mobile{
+    font-size:12px;
+    padding:8px 12px;
+  }
+
+  .menu{
+    grid-template-columns:repeat(2,1fr);
+    gap:12px;
+    padding:15px;
+  }
+
+  .card{
+    padding:18px;
+  }
+
+  .icon{
+    font-size:26px;
+  }
+
+  .card h3{
+    font-size:13px;
+  }
+
+  .card p{
+    font-size:11px;
+  }
+
+  .footer{
+    font-size:11px;
+    padding:10px;
+  }
+}
+
+/* ANIMASI */
+.fade{
+  animation:fadeIn 0.4s ease;
+}
+
+@keyframes fadeIn{
+  from{opacity:0;}
+  to{opacity:1;}
+}
+</style>
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+<div class="navbar">
+  <div class="logo">
+    <img src="logorsud.png">
+    <span></span>
+  </div>
+
+  <div class="nav-menu">
+    <a href="index.html">Home</a>
+    <a href="https://drive.google.com" target="_blank">SIMUT</a>
+    <a href="dokumen.html">Dokumen</a>
+    <a href="keuangan.html">Input</a>
+  </div>
+</div>
+
+<!-- HERO -->
+<div class="hero">
+  <h1>selamat datang!</h1>
+  <p>Dashboard ini dirancang dengan tampilan yang informatif dan mudah
+dipahami, sistem ini menjadi alat bantu utama manajemen dalam
+meningkatkan kualitas pelayanan kesehatan di RSUD Bedas Tegalluar</p>
+
+  <button class="btn-mobile" onclick="toggleMobile()">
+    📱 KLIK MOBILE VERSION
+  </button>
+</div>
+
+<!-- MENU -->
+<div class="menu">
+
+  <div class="card" onclick="window.open('https://drive.google.com/drive/folders/1tHUik6HKUzyOqUgqLEx7Sq5y5CraJw4X?usp=drive_link','_blank')">
+    <div class="icon">📊</div>
+    <h3>SIMUT</h3>
+    <p>Laporan Mutu</p>
+  </div>
+
+  <div class="card" onclick="goTo('dokumen.html')">
+    <div class="icon">📁</div>
+    <h3>Dokumen</h3>
+  </div>
+
+  <div class="card" onclick="goTo('https://docs.google.com/spreadsheets/d/1WDLKIWnPBDYYUtlVPzAr3l2P1FuO6pF9Q0dmd86NrOk/edit?usp=sharing')">
+    <div class="icon">📝</div>
+    <h3>Input</h3>
+  </div>
+
+  <div class="card" onclick="goTo('https://docs.google.com/spreadsheets/d/1WDLKIWnPBDYYUtlVPzAr3l2P1FuO6pF9Q0dmd86NrOk/edit?usp=sharing')">
+    <div class="icon">📄</div>
+    <h3>Lainnya</h3>
+  </div>
+
+</div>
+
+<!-- FOOTER -->
+<div class="footer">
+  © 2026 RSUD Bedas Tegalluar
+</div>
+
+<script>
+function goTo(page){
+  window.location.href = page;
+}
+
+function toggleMobile(){
+  let body = document.body;
+  let btn = document.querySelector(".btn-mobile");
+
+  body.classList.add("fade");
+
+  setTimeout(() => {
+    body.classList.toggle("mobile-mode");
+
+    if(body.classList.contains("mobile-mode")){
+      btn.innerHTML = "💻 KLIK DESKTOP VERSION";
+    } else {
+      btn.innerHTML = "📱 KLIK MOBILE VERSION";
+    }
+
+    body.classList.remove("fade");
+  }, 150);
+}
+</script>
+
+</body>
+</html>
