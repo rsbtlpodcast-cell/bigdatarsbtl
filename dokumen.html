@@ -3,167 +3,373 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Dokumen RSBTL</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+<title>Dokumen Digital RSUD Bedas Tegalluar</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
 <style>
-*{margin:0;padding:0;box-sizing:border-box;font-family:'Poppins',sans-serif}
+
+:root{
+    --primary:#0f172a;
+    --secondary:#1e3a8a;
+    --accent:#06b6d4;
+    --white:#ffffff;
+    --glass:rgba(255,255,255,0.15);
+}
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
 
 body{
-  background:#f4f6f9;
-}
-
-/* NAVBAR */
-.navbar{
-  background:white;
-  padding:15px 30px;
-  display:flex;
-  justify-content:space-between;
-  align-items:center;
-  box-shadow:0 5px 15px rgba(0,0,0,0.1);
-}
-
-.navbar h2{
-  color:#2c3e50;
-}
-
-.navbar a{
-  text-decoration:none;
-  color:#3498db;
-  font-weight:600;
-}
-
-/* CONTAINER */
-.container{
-  padding:30px;
+    min-height:100vh;
+    background:linear-gradient(
+    135deg,
+    #0f172a,
+    #1e3a8a,
+    #0284c7);
+    color:white;
 }
 
 /* HEADER */
+
 .header{
-  margin-bottom:25px;
+    padding:20px 40px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
 }
 
-.header h1{
-  color:#2c3e50;
+.logo-area{
+    display:flex;
+    align-items:center;
+    gap:15px;
 }
 
-.header p{
-  color:gray;
+.logo-area img{
+    width:60px;
+    height:60px;
+    object-fit:contain;
+    background:white;
+    border-radius:50%;
+    padding:5px;
+}
+
+.logo-area h2{
+    font-size:22px;
+}
+
+.back-btn{
+    text-decoration:none;
+    color:white;
+    background:rgba(255,255,255,.15);
+    padding:10px 18px;
+    border-radius:12px;
+    transition:.3s;
+}
+
+.back-btn:hover{
+    background:rgba(255,255,255,.25);
+}
+
+/* HERO */
+
+.hero{
+    text-align:center;
+    padding:20px 20px 40px;
+}
+
+.hero h1{
+    font-size:42px;
+    font-weight:700;
+    margin-bottom:15px;
+}
+
+.hero p{
+    max-width:800px;
+    margin:auto;
+    font-size:16px;
+    opacity:.9;
+}
+
+/* SEARCH */
+
+.search-container{
+    max-width:900px;
+    margin:0 auto 30px;
+    padding:0 20px;
+}
+
+.search-box{
+    width:100%;
+    border:none;
+    padding:18px 25px;
+    border-radius:50px;
+    font-size:16px;
+    outline:none;
+    box-shadow:0 10px 30px rgba(0,0,0,.2);
+}
+
+/* STATS */
+
+.stats{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+    gap:20px;
+    max-width:1100px;
+    margin:0 auto 40px;
+    padding:0 20px;
+}
+
+.stat{
+    background:rgba(255,255,255,.12);
+    backdrop-filter:blur(10px);
+    border-radius:20px;
+    padding:25px;
+    text-align:center;
+    border:1px solid rgba(255,255,255,.15);
+}
+
+.stat h2{
+    font-size:36px;
+}
+
+.stat p{
+    opacity:.8;
 }
 
 /* GRID */
+
 .grid{
-  display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(230px,1fr));
-  gap:20px;
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:25px;
+    max-width:1200px;
+    margin:auto;
+    padding:20px;
 }
 
 /* CARD */
+
 .card{
-  background:white;
-  padding:20px;
-  border-radius:15px;
-  box-shadow:0 5px 15px rgba(0,0,0,0.1);
-  cursor:pointer;
-  transition:0.3s;
+    background:rgba(255,255,255,.15);
+    backdrop-filter:blur(14px);
+    border-radius:25px;
+    padding:30px;
+    cursor:pointer;
+    transition:.35s;
+    border:1px solid rgba(255,255,255,.15);
 }
 
 .card:hover{
-  transform:translateY(-6px);
+    transform:translateY(-10px);
+    box-shadow:0 20px 40px rgba(0,0,0,.25);
 }
 
-/* ICON */
 .icon{
-  font-size:35px;
-  margin-bottom:10px;
+    font-size:50px;
+    margin-bottom:15px;
 }
 
-/* TITLE */
 .card h3{
-  margin-bottom:5px;
+    margin-bottom:10px;
+    font-size:20px;
 }
 
 .card p{
-  font-size:13px;
-  color:gray;
+    opacity:.85;
+    font-size:14px;
+}
+
+/* FOOTER */
+
+.footer{
+    text-align:center;
+    padding:30px;
+    opacity:.8;
 }
 
 /* MOBILE */
+
 @media(max-width:768px){
-  .container{padding:20px}
+
+.hero h1{
+    font-size:28px;
 }
+
+.header{
+    flex-direction:column;
+    gap:15px;
+}
+
+.logo-area h2{
+    font-size:18px;
+}
+
+}
+
 </style>
 </head>
 
 <body>
 
-<!-- NAVBAR -->
-<div class="navbar">
-  <h2>📁 Dokumen RSBTL</h2>
-  <a href="index.html">⬅ Kembali</a>
+<!-- HEADER -->
+
+<div class="header">
+
+<div class="logo-area">
+<img src="logo1.png" alt="Logo RSUD">
+<div>
+<h2>RSUD Bedas Tegalluar</h2>
+<small>Sistem Dokumen Digital</small>
+</div>
 </div>
 
-<div class="container">
+<a href="index.html" class="back-btn">
+⬅ Kembali
+</a>
 
-  <div class="header">
-    <h1>Kategori Dokumen</h1>
-    <p>Pilih kategori untuk membuka dokumen di Google Drive</p>
-  </div>
+</div>
 
-  <div class="grid">
+<!-- HERO -->
 
-    <div class="card" onclick="openDrive('https://drive.google.com/drive/folders/12BxUjSrZyEHKpzsaD26GakkhYk1a73oI?usp=drive_link')">
-      <div class="icon">🏥</div>
-      <h3>Pelayanan</h3>
-      <p>Dokumen pelayanan medis & non medis</p>
-    </div>
+<div class="hero">
 
-    <div class="card" onclick="openDrive('https://drive.google.com/drive/folders/1THJvjOrhLczOYWeJ1SULMHg4vHnogkC7?usp=drive_link')">
-      <div class="icon">📊</div>
-      <h3>Management</h3>
-      <p>Dokumen manajemen RS</p>
-    </div>
+<h1>Dokumen Digital RSUD Bedas Tegalluar</h1>
 
-    <div class="card" onclick="openDrive('https://drive.google.com/drive/folders/1VEvBK0g6zD75IRcHB_D_oMC4NYCH4_iP?usp=drive_link')">
-      <div class="icon">💰</div>
-      <h3>Administrasi Keuangan</h3>
-      <p>Laporan & administrasi keuangan</p>
-    </div>
+<p>
+Akses seluruh dokumen pelayanan, manajemen,
+keuangan, SDM, aset dan arsip secara cepat,
+aman, terintegrasi dan mudah digunakan.
+</p>
 
-    <div class="card" onclick="openDrive('https://drive.google.com/drive/folders/15Tc-QpACX4Kxs__5hJF6ZanhsinIqxjv?usp=drive_link')">
-      <div class="icon">👥</div>
-      <h3>SDM & Kepegawaian</h3>
-      <p>Data pegawai & SDM</p>
-    </div>
+</div>
 
-    <div class="card" onclick="openDrive('https://drive.google.com/drive/folders/16_WBERgeBzoqKfEuDB6XRZaRMfB-DHVH?usp=drive_link')">
-      <div class="icon">🏢</div>
-      <h3>Aset</h3>
-      <p>Data aset & inventaris RS</p>
-    </div>
+<!-- SEARCH -->
 
-    <div class="card" onclick="openDrive('https://drive.google.com/drive/folders/11RmFpNRgQoWpstHfoWjsjoLpzawo6SML?usp=drive_link')">
-      <div class="icon">🛠️</div>
-      <h3>IPSRS</h3>
-      <p>Instalasi pemeliharaan sarana RS</p>
-    </div>
+<div class="search-container">
 
-    <div class="card" onclick="openDrive('https://drive.google.com/drive/folders/1nnDNezCvLOhn9YbaAkeS-nFAnDwYyJBv?usp=drive_link')">
-      <div class="icon">🗂️</div>
-      <h3>Arsip Statis</h3>
-      <p>Dokumen arsip lama & penting</p>
-    </div>
+<input
+type="text"
+class="search-box"
+id="search"
+placeholder="🔍 Cari kategori dokumen..."
+>
 
-  </div>
+</div>
 
+<!-- STATS -->
+
+<div class="stats">
+
+<div class="stat">
+<h2>7</h2>
+<p>Kategori Dokumen</p>
+</div>
+
+<div class="stat">
+<h2>24/7</h2>
+<p>Akses Dokumen</p>
+</div>
+
+<div class="stat">
+<h2>100%</h2>
+<p>Digital & Paperless</p>
+</div>
+
+</div>
+
+<!-- GRID -->
+
+<div class="grid" id="grid">
+
+<div class="card"
+onclick="openDrive('https://drive.google.com/drive/folders/12BxUjSrZyEHKpzsaD26GakkhYk1a73oI?usp=drive_link')">
+<div class="icon">🏥</div>
+<h3>Pelayanan</h3>
+<p>Dokumen pelayanan medis dan non medis</p>
+</div>
+
+<div class="card"
+onclick="openDrive('https://drive.google.com/drive/folders/1THJvjOrhLczOYWeJ1SULMHg4vHnogkC7?usp=drive_link')">
+<div class="icon">📊</div>
+<h3>Management</h3>
+<p>Dokumen manajemen rumah sakit</p>
+</div>
+
+<div class="card"
+onclick="openDrive('https://drive.google.com/drive/folders/1VEvBK0g6zD75IRcHB_D_oMC4NYCH4_iP?usp=drive_link')">
+<div class="icon">💰</div>
+<h3>Administrasi Keuangan</h3>
+<p>Laporan dan administrasi keuangan</p>
+</div>
+
+<div class="card"
+onclick="openDrive('https://drive.google.com/drive/folders/15Tc-QpACX4Kxs__5hJF6ZanhsinIqxjv?usp=drive_link')">
+<div class="icon">👥</div>
+<h3>SDM & Kepegawaian</h3>
+<p>Dokumen SDM dan pegawai</p>
+</div>
+
+<div class="card"
+onclick="openDrive('https://drive.google.com/drive/folders/16_WBERgeBzoqKfEuDB6XRZaRMfB-DHVH?usp=drive_link')">
+<div class="icon">🏢</div>
+<h3>Aset</h3>
+<p>Data aset dan inventaris rumah sakit</p>
+</div>
+
+<div class="card"
+onclick="openDrive('https://drive.google.com/drive/folders/11RmFpNRgQoWpstHfoWjsjoLpzawo6SML?usp=drive_link')">
+<div class="icon">🛠️</div>
+<h3>IPSRS</h3>
+<p>Pemeliharaan sarana rumah sakit</p>
+</div>
+
+<div class="card"
+onclick="openDrive('https://drive.google.com/drive/folders/1nnDNezCvLOhn9YbaAkeS-nFAnDwYyJBv?usp=drive_link')">
+<div class="icon">🗂️</div>
+<h3>Arsip Statis</h3>
+<p>Dokumen arsip penting rumah sakit</p>
+</div>
+
+</div>
+
+<div class="footer">
+© 2026 RSUD Bedas Tegalluar
 </div>
 
 <script>
+
 function openDrive(link){
-  window.open(link, '_blank');
+    window.open(link,'_blank');
 }
+
+document.getElementById('search').addEventListener('keyup',function(){
+
+    let keyword=this.value.toLowerCase();
+
+    let cards=document.querySelectorAll('.card');
+
+    cards.forEach(card=>{
+
+        let text=card.innerText.toLowerCase();
+
+        if(text.includes(keyword)){
+            card.style.display='block';
+        }else{
+            card.style.display='none';
+        }
+
+    });
+
+});
+
 </script>
 
 </body>
 </html>
+```
